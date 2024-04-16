@@ -18,6 +18,8 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
+    width: 1440px;
+    height: 5020px;
 }
 ol, ul,li {
     list-style: none;
@@ -28,9 +30,7 @@ a{
     color: var(--cor-de-link);
 }
 
-div{
-    display: block;
-}
+
 
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
 
@@ -45,52 +45,284 @@ Enlace de la documentación oficial!
 https://en.bem.info/methodology/quick-start/*/
 
 /*Sección Menu*/
+/*
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+}*/
 
 section.menu{
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    }
+
+    .menu__header {
+    display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 0.5rem;
+    color: var(--highlight-color);
+    } 
 
-}
+    .menu nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
 
-.menu_List{
-    display: none;
-    float: left;
-    text-align: center;
-    width: 5em;
-}
+    .menu__list {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    }
 
-.menu_List li{
-    
-}
+
 
 /*Sección Title*/
+   section.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    }
 
-section.title{
+    
+     .title__div{
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-items: flex-end;
+        width: 1132px;
+        height: 368px;
+    }
 
-}
+    .title__container{
+        width: 751px;
+        height: 246px;
+        gap: 24px;
+
+    }
+
+    .title__profile img{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 15px;
+        width: 368px;
+        height: 368px;
+    
+      
+    }
+
+    .title__dive h2{
+        width: 751px;
+        height: 122px;
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 61px;
+        color: #464646;
+
+    }
+
+    .title__dive h3{
+        width: 751px;
+        height: 52px;
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 25px;
+        font-style: normal;
+        background-color: #464646;
+        }
+
+   
+
+    .title__network{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 4px
+    }
 
 /*Sección About*/
 
 section.about{
 
+    .about__container{
+        width: 1440px;
+        height: 383px;
+        padding: 64px;
+        gap: 10px;
+        background: #EAF2FD;
+    }
+
+    .about__title{
+        width: 137px;
+        height: 38px;
+        font-family: Raleway;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 37.57px;
+        text-align: left;
+    }
+
 }
 
 /*Sección Hobbies*/
 
-section.hobbies{
+section.skills{
+
     
+    .skills__title{
+        display: flex;
+        justify-content: center;
+        font-family: raleway;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 37px;
+    }
+
+    .skills__line{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 /* Experiencia Académica*/
 
-section.academic{
+section.hobbies{
 
+    
+    .hobbies__title{
+        display: flex;
+        justify-content: center;    
+        font-family: raleway;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 37px;
+    }
+
+    .hobbies__line{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 /* experiencia*/
 
+section.academic{
+
+    background: #EAF2FD;
+
+    .academic__title{
+    display: flex;
+    justify-content: center;
+
+   }
+
+    .academic__courses{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+
 section.experience{
+
+    .experiencie__box{
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+
+        width: 1136px;
+        height: 1886px;
+        gap: 32px;
+    }
+
+    .experience__section__title{
+    
+        width: 364px;
+        height: 38px;
+        align-items: center;
+        padding-left: 41%;
+
+    }
+
+    .experiencie__box{
+        /*display: flex;*/
+        width: 1136px;
+        height: 406px;
+        gap: 16px;
+        padding-bottom: 5%;
+    }
+
+    .experience__info{
+        width: 368px;
+        height: 112px;
+        gap: 8px;
+    }
+
+    .experience__description{
+        width: 368px;
+        height: 112px;
+        gap: 8px;
+    }
+
+    .experience__description h2{
+        width: 368px;
+        height: 26px;
+
+        font-family: raleway;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 25.83px;
+    }
+
+    .experience__description h3{
+        width: 368px;
+        height: 19px;
+
+        font-family: raleway;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18.78px;
+    }
+
+   .experiencie__box:nth-child(2),
+   .experiencie__box:nth-child(4){
+   display: flex;
+   flex-flow: row-reverse;
+    
+   }
+
+    .experiencia__botao--repo{
+        border: 1px solid #2A7AE4;   
+    }
+    .experiencia__botao--repo:hover{
+        background-color: #2A7AE4;  
+    }
+
+
+/*
+    .experiencia__botao--repo:hover{
+        border: 1px solid #2A7AE4
+    }
+
+    .experience__botao--demo:hover{
+         
+    }
+*/
+/* revisar esto para mover de lado solo lo poen al final de la linea no del cuadro
+    .experience__description{
+        display: flex;
+        flex-flow: row-reverse;
+    }
+
+*/
 
 }
 
@@ -105,6 +337,42 @@ section.formcontato{
 section.footer{
    
 }
+/* contac us */
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display:block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: darkorange ;
+    transform: scale(1.2);
+}
+
 
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
