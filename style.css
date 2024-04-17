@@ -18,8 +18,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
-    width: 1440px;
-    height: 5020px;
+    overflow-x: hidden;
 }
 ol, ul,li {
     list-style: none;
@@ -45,14 +44,16 @@ Enlace de la documentación oficial!
 https://en.bem.info/methodology/quick-start/*/
 
 /*Sección Menu*/
-/*
+
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px;
 
-}*/
+}
+
+
 
 section.menu{
     display: flex;
@@ -61,22 +62,27 @@ section.menu{
     }
 
     .menu__header {
-    display: flex;
+   /* display: flex;*/
     align-items: center;
     gap: 0.5rem;
     color: var(--highlight-color);
     } 
 
     .menu nav {
-    display: flex;
+    /*display: flex;*/
     justify-content: space-evenly;
     align-items: center;
     }
 
     .menu__list {
+    /*display: none;*/
     display: flex;
     justify-content: space-around;
     gap: 1rem;
+    }
+
+    .menu__list__item-c{
+        display: none;
     }
 
 
@@ -305,72 +311,100 @@ section.experience{
     .experiencia__botao--repo:hover{
         background-color: #2A7AE4;  
     }
-
-
-/*
-    .experiencia__botao--repo:hover{
-        border: 1px solid #2A7AE4
-    }
-
-    .experience__botao--demo:hover{
-         
-    }
-*/
-/* revisar esto para mover de lado solo lo poen al final de la linea no del cuadro
-    .experience__description{
-        display: flex;
-        flex-flow: row-reverse;
-    }
-
-*/
-
 }
 
 /*Contacto*/
 
 section.formcontato{
 
+   background-color: aliceblue ;
+
+    .formcontato__contacto{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+
+    .formcontato--esquerda{
+        flex: 1;
+    }
+
+    .formcontato__img{
+        width: 464px;
+        height: 593px;
+    }
+
+    .formcontato__text {
+        text-align: left;
+        padding: 0 20px;
+    }
+    
+    .formcontato__title {
+        
+        background: white;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .formcontato__subtext {
+        color: #666;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .formcontato__form {
+        margin-top: 20px;
+    }
+    
+    .formcontato__input,
+    .formcontato__textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box; /* para incluir el relleno en el ancho total */
+    }
+    
+    .formcontato__textarea {
+        resize: none;
+    }
+    
+    .formcontato__botao {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+    
+    .formcontato__botao:hover {
+        background-color: #45a049;
+    }
 }
 
 /*footeer*/
 
 section.footer{
+    .footer {
+        display: flex;
+        justify-content: center;
+    }
+    
+    /* Estilos para el contenido del pie de página */
+   .footer__rodape{
    
-}
-/* contac us */
+   align-content: center;
+   background: url(assets/AdobeStock_712785350_Preview.jpeg);
+   padding: 40px;
+   }
 
-form{
-    margin: 40px 0;
-}
-
-form label, form legend{
-    display:block;
-    font-size: 20px;
-    margin: 0 0 10px;
-}
-
-.input-padron{
-    display: block;
-    margin: 0 0 20px;
-    padding: 10px 25px;
-    width: 50%;
-}
-
-.enviar{
-    width: 40%;
-    padding: 15px 0 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    background: orange;
-    border-radius: 5px;
-    transition: 1s all;
-    cursor: pointer;
-}
-
-.enviar:hover{
-    background: darkorange ;
-    transform: scale(1.2);
 }
 
 
@@ -379,10 +413,31 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 
 /*Tablet*/
-@media (min-width: 768px) {
+@media (max-width: 960px) {
 
 /* Menú */
+section.menu{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    }
 
+    .menu__header {
+   display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--highlight-color);
+    } 
+
+    .menu nav {
+    display: flex;
+    /*justify-content: space-evenly;*/
+    align-items: center;
+    }
+
+    .menu__list {
+    display: none;
+    }
 /*title*/
 
 /*Skills*/
