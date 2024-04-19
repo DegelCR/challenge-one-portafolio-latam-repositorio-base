@@ -50,7 +50,6 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-
 }
 
 
@@ -62,20 +61,20 @@ section.menu{
     }
 
     .menu__header {
-   /* display: flex;*/
+   display: flex;
     align-items: center;
     gap: 0.5rem;
     color: var(--highlight-color);
     } 
 
     .menu nav {
-    /*display: flex;*/
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     }
 
     .menu__list {
-    /*display: none;*/
+    display: none;
     display: flex;
     justify-content: space-around;
     gap: 1rem;
@@ -85,6 +84,11 @@ section.menu{
         display: none;
     }
 
+    .title__profile{
+        border-radius: 70px;
+        padding: 5%;
+    }
+
 
 
 /*Sección Title*/
@@ -92,12 +96,13 @@ section.menu{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+
     }
 
     
      .title__div{
         display: flex;
-        flex-flow: row-reverse nowrap;
+       flex-flow: row-reverse nowrap;
         justify-items: flex-end;
         width: 1132px;
         height: 368px;
@@ -416,10 +421,10 @@ Utiliza las referencias de los breakpoints @media abajo */
 @media (max-width: 960px) {
 
 /* Menú */
+
 section.menu{
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
     }
 
     .menu__header {
